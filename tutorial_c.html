@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Manual</title>
+</head>
+
+<body>
+    <div>
+        <h2>Introdução</h2>
+        <p>Existem 3 estruturas de repetição em C:</p>
+        <ul>
+            <li>for</li>
+            <li>while</li>
+            <li>do while</li>
+        </ul>
+        <p>Cada seção cobrirá uma estrutura de repetição.</p>
+
+    </div>
+    <div>
+        <h2>For</h2>
+        <p>O loop for é uma estrutura de repetição muito utilizada nos programas em C.É muito útil quando se sabe de
+            antemão quantas vezes a repetição deverá ser executada.Este loop utiliza uma variável para controlar a
+            contagem do loop, bem como seu incremento.Trata-se de um comando bem enxuto, já que própria estrutura faz a
+            inicialização, incremento e encerramento do laço.
+        </p>
+
+        <p>
+            <code>
+                int main()<br>
+                {
+                    int contador; //variável de controle do loop<br>
+                      <br>
+                     for(contador = 1; contador <= 10; contador++)<br>
+                    {<br>
+                        printf("%d ", contador);<br>
+                    }<br>
+                      <br>
+                    return(0);<br>
+                }
+            </code>
+        </p>
+
+        <p>
+            Neste exemplo podemos observar três coisas sobre o funcionamento da estrutura de repetição for:
+        <ul>
+            <li>Primeiramente o contador foi inicializado com um valor determinado</li>
+            <li>Depois testamos se a condição que envolve o contador é verdadeira (ou seja se contador <= 10), em caso
+                    afirmativo, a repetição continua; caso – contrário, ela será encerrada. </li>
+            <li>A cada nova repetição a variável do contador foi incrementada</li>
+        </ul>
+        </p>
+
+    </div>
+    <div>
+        <h2>While</h2>
+        <p>Executa a repetição de um bloco de instruções enquanto uma condição é verdadeira.</p>
+        <p>
+            <code>
+                int main(void)<br>
+                {<br>
+                    int contador = 1; //declarando e inicializando a variável de controle<br>
+                    <br>
+                    while (contador <= 10) // Testando a condição<br>
+                    {<br>
+                        printf("%d ", contador); //Executando um comando dentro do laço<br>
+                        <br>
+                        contador++; //atualizando a variável de controle<br>
+                    }  <br>
+                    <br>
+                    return 0;<br>
+                }<br>   
+            </code>
+        </p>
+
+        <p>
+            Inicialmente, a variável de controle denominada contador foi declarada e inicializada com o valor 1.
+
+            O teste da condição while é realizado , e como o contador é menor que 10, então a condição é verdadeira.
+
+            Como a condição é verdadeira, o programa entra dentro do corpo do laço e executa o printf, exibindo o valor
+            da variável contador.
+
+            Após executar o comando printf, o contador é incrementado.
+
+            Depois do incremento, a condição é testada novamente e enquanto for verdadeira, os comandos são executados
+            de novo, até que a condição se torne falsa.
+
+            A condição falsa faz com que o laço seja encerrado.
+        </p>
+
+    </div>
+    <div>
+        <h2>Do while</h2>
+        <p>
+            Esta estrutura de repetição, garante que o bloco de instruções seja executado no mínimo uma vez, já que a
+            condição que controla o laço é testada apenas no final do comando.
+
+            A diferença entre o comando while e o do…while é justamente o local onde a condição que controla o laço é
+            testada.
+
+            No comando while a condição é testada antes do bloco de instruções, e caso a condição seja falsa a repetição
+            não será executada.
+
+            No do…while o bloco de comandos é executado pelo menos uma vez de forma obrigatória, independente do
+            resultado da expressão lógica. Exemplo do código:
+        </p>
+        <p>
+            <code>
+            int main(void)<br>
+            {<br>
+                float nota1=0,nota2=0,media=0;<br>
+                int resp;<br>
+                <br>
+                do<br>
+                {<br>
+                    printf("Digite a primeira nota: ");<br>
+                    scanf("%f",&nota1);<br>
+                    printf("Digite a segunda nota: ");<br>
+                    scanf("%f",&nota2);<br>
+                    <br>
+                    media = (nota1 + nota2)/2;<br>
+                    printf("Media do aluno = %f\n",media);<br>
+                    <br>
+                    printf("Digite 1 para continuar ou 2 para sair\n");<br>
+                    scanf("%d", &resp);<br>
+                    <br>
+                }while (resp==1);<br>
+                <br>
+                return 0;<br>
+            }<br>
+            </code>
+        </p>
+    </div>
+</body>
+</html> 
